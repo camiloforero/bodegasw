@@ -17,7 +17,8 @@ import org.eclipse.persistence.annotations.JoinFetch;
 @IdClass(BodegaItemInventarioEntityId.class)
 @NamedQueries({
     @NamedQuery(name = "BodegaItemInventarioEntity.getItemInventarioListForBodega", query = "SELECT  u FROM BodegaItemInventarioEntity u WHERE u.bodegaId=:bodegaId"),
-    @NamedQuery(name = "BodegaItemInventarioEntity.deleteBodegaItemInventario", query = "DELETE FROM BodegaItemInventarioEntity u WHERE u.itemInventarioId=:itemInventarioId and  u.bodegaId=:bodegaId")
+    @NamedQuery(name = "BodegaItemInventarioEntity.deleteBodegaItemInventario", query = "DELETE FROM BodegaItemInventarioEntity u WHERE u.itemInventarioId=:itemInventarioId and  u.bodegaId=:bodegaId"),
+    @NamedQuery(name = "BodegaItemInventarioEntity.getItemInventarioListForBodegaProducto", query = "SELECT  u FROM BodegaItemInventarioEntity u WHERE u.bodegaId=:bodegaId AND u.itemInventarioEntity.productoId = :productoId")
 })
 public class BodegaItemInventarioEntity implements Serializable {
 

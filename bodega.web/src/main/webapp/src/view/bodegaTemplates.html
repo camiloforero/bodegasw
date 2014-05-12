@@ -14,10 +14,10 @@
 		<td><%= htmlEncode(bodega.getDisplay('name')) %></td>
     <td>
     <% if(showEdit) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-bodega-edit',{id:<%= bodega.id %>}); return false" >Edit</a> |
+    <a onclick="Backbone.trigger('<%= componentId %>-bodega-edit',{id:<%= bodega.id %>}); return false" >Ver contenido</a> |
 	<% } %> 
 	<% if(showDelete) {%>
-    <a onclick="Backbone.trigger('<%= componentId %>-bodega-delete',{id:<%= bodega.id %>}); return false" >Delete</a> 
+    <a onclick="Backbone.trigger('<%= componentId %>-bodega-delete',{id:<%= bodega.id %>}); return false" >Eliminar</a> 
 	<% } %>    
 	</td>
     </tr>
